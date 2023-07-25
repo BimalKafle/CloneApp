@@ -14,7 +14,7 @@
                 :src="thumbnail || ''"
                 :class="
                     show
-                    ?'transition ease-in-out delay-150 rounded-l-lg'
+                    ?'transition ease-in-out delay-150 rounded-lg'
                     :'rounded-lg'+
                     (showVideo?'delay-350 hidden':'')
                 "

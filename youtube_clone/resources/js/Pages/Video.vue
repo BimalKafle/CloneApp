@@ -4,7 +4,7 @@ import Navbar from '@/Layouts/NavbarLayout.vue'
 import CheckCircle from 'vue-material-design-icons/CheckCircle.vue'
 import ThumbUpOutline from 'vue-material-design-icons/ThumbUpOutline.vue'
 import ThumbDownOutline from 'vue-material-design-icons/ThumbDownOutline.vue'
-
+import RecommendedVideos from '@/Components/RecommendedVideos.vue'
 
 // defineProps({
 //     canLogin: Boolean,
@@ -70,12 +70,36 @@ import ThumbDownOutline from 'vue-material-design-icons/ThumbDownOutline.vue'
                              <div class="text-gray-200 text-sm font-semibold">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea vitae alias veniam officia pariatur nemo delectus, quibusdam, reiciendis cumque rerum aut cupiditate tenetur, similique dolorem ipsam nostrum repellat ipsum.
                             </div>
+                            <div class="mt-4 flex items-center">
+                                <ThumbUpOutline fillColor="#FFFFFF" :size="20n" class="pr-2"/>
+                                <div class="text-gray-400 text-sm font-extrabold pr-10">
+                                        {{(Math.random()*100).toFixed(0)}}
+                                </div>
+                                <ThumbDownOutline fillColor="#FFFFFF" :size="20"  />
+                            </div>
                         </div>
                           
                         </div>
                     </div>
+                    
+                </div>
+                
+                  <div class="w-[500px] p-3 sm:block hidden mt-11">
+                  <div class="flex mb-3 ">
+                    <RecommendedVideos
+                    :vid="{
+                      title:'little dog in a jumper',
+                      video:'/videos/sunset.mp4',  
+                      thumbnail:'/videos/Thumbnails/sunset.png',
+                      user:'John Weeks Dev',
+                      views:'12k views - 3 days ago',
+
+                    }"
+                   />
+                  </div>
                 </div>
             </div>
+          
     </Navbar>
 
 </template>
